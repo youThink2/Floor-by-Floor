@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 482755802219276900}
   - component: {fileID: 7887148767189112132}
   - component: {fileID: 1217184203156315175}
+  - component: {fileID: -8307626070275928559}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Enemy
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1681145721
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 790317520fc1d0c49b9e4bf52d54279d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8, y: 2.05}
   m_EdgeRadius: 0
+--- !u!114 &-8307626070275928559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792395184763457742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673462cbe080b1f4bba48f6d5b9d3b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1

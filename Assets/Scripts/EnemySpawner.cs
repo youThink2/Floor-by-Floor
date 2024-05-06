@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject Enemy;
 
-    public float spawnRate = 1;
+    public float spawnRate = 2;
     private float timer = 0;
 
     
@@ -19,14 +19,14 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
+        if (timer < 10)
         {
             timer = timer + Time.deltaTime;
         }
         else
         {
             SpawnGhost();
-            timer = 5;
+            timer = 0;
         }
     }
 

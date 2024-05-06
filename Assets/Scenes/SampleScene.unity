@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000007978db3587c0cb9b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1354,8 +1354,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 903575673
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01f9444fa5eb52e46a80d92bf4235e1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2098,8 +2098,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1681145721
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cecceb6fbd29af24c9afa4a15039dcd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2121,7 +2121,7 @@ Transform:
   m_GameObject: {fileID: 1313867337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.69, y: -7.93, z: -0.66}
+  m_LocalPosition: {x: -3.82, y: -3.89, z: -0.66}
   m_LocalScale: {x: 0.175156, y: 0.175156, z: 0.175156}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2351,7 +2351,7 @@ Transform:
   m_GameObject: {fileID: 1916826207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92, y: 10.07, z: -0.15782548}
+  m_LocalPosition: {x: 4.27, y: 2.56, z: -0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2537,6 +2537,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1500400416171478016, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500400416171478016, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1681145721
+      objectReference: {fileID: 0}
     - target: {fileID: 2134952974126938016, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
       propertyPath: bulletSpeed
       value: 10
@@ -2559,7 +2567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515397751154253731, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4515397751154253731, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2605,8 +2613,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: idle-shotgun-prototype
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4536738900963460253, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4515397751154253731, guid: d32d1415d3633674d8d255d4b3cd8436, type: 3}
