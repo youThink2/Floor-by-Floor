@@ -8,7 +8,7 @@ public class Bullets : MonoBehaviour
    public Transform bulletSpawn;
    public Transform bulletSpawn2;
    public Transform bulletSpawn3;
-   public float bulletSpeed = 20;
+   public float bulletSpeed = 10;
 
    Vector2 lookDirection;
    float lookAngle;
