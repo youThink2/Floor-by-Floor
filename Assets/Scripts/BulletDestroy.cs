@@ -10,4 +10,17 @@ public class NewBehaviourScript : MonoBehaviour
    {
         Destroy(gameObject, life);
    }
+
+   void OnTriggerEnter2D(Collider2D other)
+   {
+      if (other.CompareTag("Enemy"))
+      {
+         EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+         if (enemy != null)
+         {
+            enemy.TakeDamage(1); // Deals 1 damage
+            Destroy(gameObject);
+         }
+      }
+   }
 }

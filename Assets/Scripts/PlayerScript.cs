@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int playerSpeed = 4;  //players movement speed
+    public int playerSpeed = 4;  //Players movement speed
+    public int Health = 5; //Max health for player
+    private int currentHealth; //Keep record of player current health
 
     void Start()
     {
-        
+        currentHealth = Health;
     }
 
     void Update()
@@ -22,5 +24,21 @@ public class PlayerScript : MonoBehaviour
         
         transform.Translate(movementDirection * (playerSpeed * inputMagnitude * Time.deltaTime), Space.World);
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <=0)
+        {
+            Dead();
+        }
+    }
+
+    private void Dead()
+    {
+        Debug.Log("Player Dead");
+        Destroy(gameObject);
     }
 }

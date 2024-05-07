@@ -7,7 +7,6 @@ public class Bullets : MonoBehaviour
    public GameObject bullet;
    public Transform bulletSpawn;
    public Transform bulletSpawn2;
-   public Transform bulletSpawn3;
    public float bulletSpeed = 10;
 
    Vector2 lookDirection;
@@ -19,15 +18,16 @@ public class Bullets : MonoBehaviour
 
       if (Input.GetMouseButtonDown(0))
       {
+         //First bullet
          GameObject bulletClone = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-         GameObject bulletClone1 = Instantiate(bullet, bulletSpawn2.position, Quaternion.identity);
-         GameObject bulletClone2 = Instantiate(bullet, bulletSpawn3.position, Quaternion.identity);
-
-
+         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+         bulletClone.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
          bulletClone.GetComponent<Rigidbody2D>().velocity = lookDirection.normalized * bulletSpeed;
+         //Second bullet
+         GameObject bulletClone1 = Instantiate(bullet, bulletSpawn2.position, Quaternion.identity);
+         bulletClone1.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
          bulletClone1.GetComponent<Rigidbody2D>().velocity = lookDirection.normalized * bulletSpeed;
-         bulletClone2.GetComponent<Rigidbody2D>().velocity = lookDirection.normalized * bulletSpeed;
-
       }
    }
+
 }
