@@ -15,12 +15,13 @@ public class SpawnLoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void SpawnItem()
+    public void SpawnItem()
     {
         float randomX = Random.Range(spawnMin.x, spawnMax.x);
         float randomY = Random.Range(spawnMin.y, spawnMax.y);
         Vector2 randomPos = new Vector2(randomX, randomY);
 
         Instantiate(Loot, randomPos, Quaternion.identity);
-    }
+
+    } 
 }

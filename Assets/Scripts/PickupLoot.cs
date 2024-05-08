@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickupLoot : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class PickupLoot : MonoBehaviour
         {
             Destroy(other.gameObject);
             Debug.Log("Item collected!");
+            //Adds score
+            ScoreManager score = FindObjectOfType<ScoreManager>();
+            score.AddScore(1);
+            SpawnLoot spawn = FindObjectOfType<SpawnLoot>();
+            spawn.SpawnItem();
+
+
         }
     }
 }
