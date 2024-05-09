@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
 
     private Vector2 movement;
 
+    public Restart restart;
     void Start()
     {
         currentHealth = health;
@@ -48,5 +49,6 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log("Player Dead");
         Destroy(gameObject);
+        restart.GameOver();
     }
 }
