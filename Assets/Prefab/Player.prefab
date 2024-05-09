@@ -108,6 +108,7 @@ MonoBehaviour:
   playerSpeed: 3
   health: 5
   animator: {fileID: 0}
+  restart: {fileID: 0}
 --- !u!114 &5047778766305463018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +137,9 @@ MonoBehaviour:
   bulletSpawn: {fileID: 8970856402874060096}
   bulletSpawn2: {fileID: 5960175412081995310}
   bulletSpeed: 10
-  bulletSound: {fileID: 8300000, guid: e7a8f7eeb3754b54bbef40622198c392, type: 3}
+  source: {fileID: 0}
+  bulletSound: {fileID: 8300000, guid: 6514206d066c6a64e9703cadf7bcef83, type: 3}
+  fireRate: 0
 --- !u!114 &4410827520937990100
 MonoBehaviour:
   m_ObjectHideFlags: 0

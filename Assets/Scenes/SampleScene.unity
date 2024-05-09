@@ -2657,7 +2657,7 @@ PrefabInstance:
     - target: {fileID: 8041367990418534243, guid: 1bab58c1019427e4a830ab667cd0bd6d, type: 3}
       propertyPath: bulletSound
       value: 
-      objectReference: {fileID: 8300000, guid: e7a8f7eeb3754b54bbef40622198c392, type: 3}
+      objectReference: {fileID: 8300000, guid: 6514206d066c6a64e9703cadf7bcef83, type: 3}
     - target: {fileID: 8234199585589948280, guid: 1bab58c1019427e4a830ab667cd0bd6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.96
