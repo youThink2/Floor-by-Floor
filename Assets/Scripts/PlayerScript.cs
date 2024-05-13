@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class PlayerScript : MonoBehaviour
 {
     public int playerSpeed = 4;  //Players movement speed
@@ -13,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     private Vector2 movement;
 
     public Restart restart;
+    
     void Start()
     {
         currentHealth = health;
@@ -20,6 +22,7 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        //Setting up movement and speed
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
@@ -32,7 +35,6 @@ public class PlayerScript : MonoBehaviour
         movementDirection.Normalize();
         
         transform.Translate(movementDirection * (playerSpeed * inputMagnitude * Time.deltaTime), Space.World);
-
     }
 
     public void TakeDamage(int damage)
@@ -45,10 +47,11 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void Dead()
+    public void Dead()
     {
         Debug.Log("Player Dead");
         Destroy(gameObject);
         restart.GameOver();
     }
+
 }
