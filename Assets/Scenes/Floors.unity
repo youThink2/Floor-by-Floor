@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2078485033}
+  playerScript: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!1 &174764008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164.3132, y: -216}
+  m_AnchoredPosition: {x: -418, y: -297}
   m_SizeDelta: {x: 115.967, y: 21.7438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078485033
@@ -3423,7 +3425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -396.97205, y: -212.44125}
+  m_AnchoredPosition: {x: -648, y: -297}
   m_SizeDelta: {x: 115.2422, y: 81.9017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143377225
