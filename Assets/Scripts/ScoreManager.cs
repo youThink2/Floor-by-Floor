@@ -47,7 +47,7 @@ public class ScoreManager : MonoBehaviour
     }
     public void AddTime()
     {
-        remainingTime += 10f;
+        remainingTime += 5f;
         UpdateTimer();
     }
 
