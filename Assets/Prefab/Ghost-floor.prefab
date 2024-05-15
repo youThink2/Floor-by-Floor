@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7911809282906720298}
   - component: {fileID: -8959477413661537799}
   m_Layer: 0
-  m_Name: Ghost
+  m_Name: Ghost-floor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ca152447a9d6e4fb07c6f4592d2dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 2
+  Health: 4
 --- !u!114 &7911809282906720298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673462cbe080b1f4bba48f6d5b9d3b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.7
+  speed: 4
 --- !u!114 &-8959477413661537799
 MonoBehaviour:
   m_ObjectHideFlags: 0
