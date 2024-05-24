@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class EnemyDealsDamage : MonoBehaviour
 {
-    public float push = 10f;
+    public float Damage = 10f;
 
     void OnTriggerEnter2D(Collider2D other)
     {
+      //Checking if the enemy is in contact with the player
       if (other.CompareTag("Player"))
       {
          PlayerScript player = other.GetComponent<PlayerScript>();
          if (player != null)
          {
-            player.TakeDamage(6); // Deals 1 damage
+            //Player takes damage
+            player.TakeDamage(6); 
          }
       }
    }

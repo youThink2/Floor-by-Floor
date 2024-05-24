@@ -6,7 +6,7 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     private int score = 0;
     public PlayerScript playerScript;
     private static ScoreManager instance;
@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
+            //Player dies if timer reaches 0
             remainingTime = 0;
             playerScript.Dead();
         }
@@ -40,24 +41,28 @@ public class ScoreManager : MonoBehaviour
     {
         if (timerText != null)
         {
+            //Making the timer format for the game
             int minutes = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
+
+    //Add time function
     public void AddTime()
     {
-        remainingTime += 5f;
+        remainingTime += 10f;
         UpdateTimer();
     }
-
+    
+    //Add score function
     public void AddScore(int amount)
     {
         score += amount;
         UpdateScore();
-        AddTime();
     }
 
+    //Update the score function
     private void UpdateScore()
     {
         if (scoreText != null)

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public float life = 1;
+   //Bulet life seconds
+   public float life = 1;
 
     void Awake()
    {
@@ -13,14 +14,22 @@ public class NewBehaviourScript : MonoBehaviour
 
    void OnTriggerEnter2D(Collider2D other)
    {
+      //When bullet comes in contact with enemy tag
       if (other.CompareTag("Enemy"))
       {
          EnemyHealth enemy = other.GetComponent<EnemyHealth>();
          if (enemy != null)
          {
-            enemy.TakeDamage(1); // Deals 1 damage
+            // Deals 1 damage
+            enemy.TakeDamage(1); 
             Destroy(gameObject);
          }
       }
+      //When bullet comes in conact with Collider tag
+      else if (other.CompareTag("Collider"))
+      {
+         Destroy(gameObject);
+      }
    }
 }
+

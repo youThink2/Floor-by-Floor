@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Loot
   - Enemy
+  - Collider
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 903575673
+    locked: 0
+  - name: Particle
+    uniqueID: 2552062157
     locked: 0
   - name: People
     uniqueID: 2613821575

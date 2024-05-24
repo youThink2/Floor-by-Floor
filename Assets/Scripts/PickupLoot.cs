@@ -13,12 +13,12 @@ public class PickupLoot : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("Item collected!");
             //Adds score
-            ScoreManager score = FindObjectOfType<ScoreManager>();
-            score.AddScore(1);
+            //ScoreManager score = FindObjectOfType<ScoreManager>();
+            //score.AddScore(1);
             SpawnLoot spawn = FindObjectOfType<SpawnLoot>();
             spawn.SpawnItem();
-
-
+            ScoreManager score = FindObjectOfType<ScoreManager>();
+            score.AddTime();
         }
     }
 }

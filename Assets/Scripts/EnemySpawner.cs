@@ -5,41 +5,37 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject Enemy;
-
+    public bool spawnImmediately = true; // Toggle to control immediate spawning
     public float spawnRate = 2;
-    private float timer = 0;
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        SpawnGhost();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (timer < 10)
-        {
-            timer = timer + Time.deltaTime;
-        }
-        else
+        if (spawnImmediately)
         {
             SpawnGhost();
-            timer = 0;
+        }
+
+        // Start the continuous spawning coroutine
+        StartCoroutine(SpawnContinuously());
+    }
+
+    // Coroutine to handle continuous spawning
+    private IEnumerator SpawnContinuously()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnRate);
+            SpawnGhost();
         }
     }
 
-    // A simple function that spawns logs
+    // A simple function that spawns ghosts
     private void SpawnGhost()
     {
-        // Find a position to offset
-        //float lowestPoint = -heightOffset;
-       // float highestPoint = heightOffset;
-
         Vector3 offset = new Vector3(0, 0, 0);
-        
-        // Creates a copy of the logs on top of the spawner
+
+        // Creates a copy of the ghost on top of the spawner
         Instantiate(Enemy, transform.position + offset, Quaternion.identity);
     }
 }

@@ -19,10 +19,14 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <=0)
         {
+            //Enemy dies
             Dead();
+            ScoreManager score = FindObjectOfType<ScoreManager>();
+            score.AddScore(1);
         }
     }
 
+    //Dead function which destroys the game object
     private void Dead()
     {
         Debug.Log("Enemy Dead");
